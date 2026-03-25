@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# 🛒 Fitto Grocery App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full stack grocery web application built with **React.js** and **Spring Boot**, designed to provide a seamless online grocery shopping experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🔐 **User Authentication** — Secure Login and Registration system
+- 🛍️ **Product Listing** — Browse a wide range of grocery products
+- 🛒 **Shopping Cart** — Add, update, and remove items from cart
+- 🔍 **Search & Filter** — Easily find products by name or category
+- 🛠️ **Admin Dashboard** — Manage products, users, and orders
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧰 Tech Stack
 
-### `npm test`
+### Frontend
+| Technology | Purpose |
+|---|---|
+| React.js | UI Framework |
+| HTML5 & CSS3 | Structure & Styling |
+| JavaScript | Logic & Interactivity |
+| Axios | API Calls |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
+| Technology | Purpose |
+|---|---|
+| Spring Boot | REST API Framework |
+| Java | Programming Language |
+| Spring Security | Authentication & Authorization |
+| Spring Data JPA | Database ORM |
+| MySQL | Relational Database |
+| Maven | Build Tool |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+fitto-grocery/
+│
+├── main (branch) - Frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.js
+│   ├── public/
+│   └── package.json
+│
+└── backend (branch) - Backend
+    ├── src/main/java/
+    │   └── com/fitgrocery/
+    │       ├── controller/
+    │       ├── model/
+    │       ├── repository/
+    │       └── service/
+    ├── src/main/resources/
+    │   └── application.properties
+    └── pom.xml
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚙️ Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
+- Node.js & npm
+- Java 17+
+- MySQL
+- Maven
+- Spring Tool Suite (STS)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🖥️ Frontend Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# Clone the repository
+git clone https://github.com/Prrashanthpkp/fitto-grocery.git
 
-## Learn More
+# Go to project directory
+cd fitto-grocery
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Install dependencies
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Start the development server
+npm start
+```
 
-### Code Splitting
+The frontend will run at `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+### 🔧 Backend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+# Switch to backend branch
+git checkout backend
 
-### Making a Progressive Web App
+# Open in Spring Tool Suite (STS)
+# Run as Spring Boot Application
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The backend will run at `http://localhost:8080`
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 🗄️ Database Setup
 
-### Deployment
+```sql
+-- Create the database in MySQL
+CREATE DATABASE fitgrocery;
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Update `application.properties` with your MySQL credentials:
 
-### `npm run build` fails to minify
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/fitgrocery
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+```
+## 🙋‍♂️ Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Prrashanthpkp**
+- GitHub: [@Prrashanthpkp](https://github.com/Prrashanthpkp)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
