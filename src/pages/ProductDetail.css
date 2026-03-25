@@ -1,0 +1,189 @@
+.detail-container {
+  padding: 30px 60px;
+  max-width: 100%;        /* ← full width */
+  margin: auto;
+}
+/* BACK BUTTON */
+.back-btn {
+  margin-bottom: 20px;
+  padding: 8px 20px;
+  background: white;
+  color: #2e7d32;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block;         /* ← don't stretch full width */
+  width: fit-content;
+}
+
+.back-btn:hover {
+  background: #e8f5e9;
+  border-color: #2e7d32;
+}
+
+/* CARD */
+.detail-card {
+  display: flex;
+  gap: 48px;
+  background: white;
+  padding: 36px 60px;     /* ← more horizontal padding */
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(46,125,50,0.1);
+  border: 1px solid #f0f0f0;
+  animation: fadeUp 0.5s ease both;
+  min-height: 400px;
+  align-items: center;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* IMAGE */
+.detail-image-box {
+  flex-shrink: 0;
+  width: 420px;           /* ← bigger image */
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+.detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.detail-image:hover {
+  transform: scale(1.04);
+}
+
+/* INFO */
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 12px;
+}
+
+.detail-name {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1b1b1b;
+  margin: 0;
+}
+
+.detail-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2e7d32;
+  margin: 0;
+}
+
+.detail-divider {
+  height: 1px;
+  background: linear-gradient(to right, #c8e6c9, transparent);
+  margin: 4px 0;
+}
+
+/* MACRO SECTION */
+.macro-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin: 0;
+}
+
+.macro-row {
+  display: flex;
+  gap: 20px;
+  margin: 4px 0;
+}
+
+.macro-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.macro-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  margin: 0;
+  text-align: center;
+}
+
+/* ADD TO CART */
+.add-btn {
+  margin-top: 8px;
+  padding: 13px 32px;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 14px rgba(46,125,50,0.3);
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.add-btn:hover {
+  background: linear-gradient(135deg, #1b5e20, #43a047);
+  transform: scale(1.03);
+}
+
+/* QTY BOX */
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f1f8e9;
+  border: 2px solid #a5d6a7;
+  border-radius: 12px;
+  padding: 8px 16px;
+  width: fit-content;
+  margin-top: 8px;
+}
+
+.qty-box button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.qty-box button:hover {
+  background: #1b5e20;
+}
+
+.qty-box span {
+  font-weight: 700;
+  font-size: 18px;
+  color: #2e7d32;
+  min-width: 24px;
+  text-align: center;
+}

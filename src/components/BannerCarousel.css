@@ -1,0 +1,163 @@
+.carousel-wrapper {
+  padding: 20px 20px 0;
+}
+
+/* MAIN BANNER */
+.carousel-banner {
+  position: relative;
+  border-radius: 20px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: background 0.5s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.carousel-banner.animating .glass-card {
+  animation: slideIn 0.5s cubic-bezier(0.34,1.2,0.64,1) both;
+}
+
+.carousel-banner.animating .banner-emoji {
+  animation: emojiPop 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes emojiPop {
+  from { opacity: 0; transform: scale(0.5) translateX(30px); }
+  to   { opacity: 1; transform: scale(1) translateX(0); }
+}
+
+/* GLASS CARD */
+.glass-card {
+  position: relative;
+  z-index: 2;
+  margin-left: 32px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 16px;
+  padding: 20px 28px;
+  max-width: 420px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.banner-tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.banner-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: white;
+  margin: 0 0 8px;
+  line-height: 1.25;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.banner-subtitle {
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+.banner-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #1b1b1b;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.banner-btn:hover { transform: scale(1.06); }
+
+/* BIG EMOJI */
+.banner-emoji {
+  position: absolute;
+  right: 80px;
+  font-size: 100px;
+  opacity: 0.9;
+  z-index: 2;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+  line-height: 1;
+}
+
+/* DECORATIVE CIRCLES */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  z-index: 1;
+}
+
+.c1 { width: 200px; height: 200px; top: -80px; right: -40px; }
+.c2 { width: 140px; height: 140px; bottom: -60px; right: 160px; }
+.c3 { width: 80px;  height: 80px;  top: 20px; right: 240px; background: rgba(255,255,255,0.05); }
+
+/* ARROWS */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  line-height: 1;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow.left  { left: 12px; }
+.carousel-arrow.right { right: 12px; }
+
+/* DOTS */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c8e6c9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #2e7d32;
+  width: 24px;
+  border-radius: 4px;
+}

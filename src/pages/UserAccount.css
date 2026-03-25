@@ -1,0 +1,445 @@
+.account-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.account-container {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: auto;
+  width: 100%;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 24px 28px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(46,125,50,0.1);
+  border: 1px solid #e8f5e9;
+  margin-bottom: 24px;
+}
+
+.profile-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.profile-text h2 { margin: 0 0 4px; font-size: 20px; font-weight: 800; color: #1b1b1b; }
+.profile-text p  { margin: 0; font-size: 13px; color: #888; }
+
+.account-options { display: flex; flex-direction: column; gap: 12px; }
+
+.option-card {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.option-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(46,125,50,0.12);
+  border-color: #c8e6c9;
+}
+
+.option-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1b1b1b;
+}
+
+.option-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.option-icon.green  { background: #e8f5e9; color: #2e7d32; }
+.option-icon.yellow { background: #fffde7; color: #f9a825; }
+.option-icon.blue   { background: #e3f2fd; color: #1565c0; }
+.option-icon.red    { background: #ffebee; color: #e53935; }
+
+.option-arrow { color: #ccc; font-size: 13px; }
+.logout-card .option-left { color: #e53935; }
+
+.back-btn-account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1.5px solid #c8e6c9;
+  color: #2e7d32;
+  padding: 7px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: all 0.2s;
+  width: fit-content;
+}
+
+.back-btn-account:hover { background: #e8f5e9; }
+
+.details-box {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(46,125,50,0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.details-title { font-size: 18px; font-weight: 800; color: #1b1b1b; margin: 0 0 20px; }
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.info-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.info-label  { margin: 0 0 2px; font-size: 11px; color: #aaa; text-transform: uppercase; letter-spacing: 0.8px; }
+.info-value  { margin: 0; font-size: 15px; font-weight: 600; color: #1b1b1b; }
+
+.orders-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 0;
+  color: #888;
+  font-size: 13px;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e8f5e9;
+  border-top: 3px solid #2e7d32;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.no-orders        { text-align: center; padding: 36px 10px; }
+.no-orders-emoji  { font-size: 52px; margin: 0 0 8px; }
+.no-orders-title  { font-size: 18px; font-weight: 800; color: #1b1b1b; margin: 0 0 8px; }
+.no-orders-sub    { font-size: 13px; color: #888; margin: 0 0 20px; line-height: 1.6; }
+
+.shop-now-btn {
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(46,125,50,0.3);
+  transition: all 0.2s ease;
+}
+
+.shop-now-btn:hover {
+  transform: scale(1.04);
+  background: linear-gradient(135deg, #1b5e20, #43a047);
+}
+
+/* ORDER CARDS */
+.order-card {
+  background: #f9f6e8;
+  border: 1px solid #e8f5e9;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+
+.order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.order-id     { font-size: 14px; font-weight: 700; color: #1b1b1b; }
+.order-method { font-size: 12px; color: #888; margin: 4px 0; }
+.order-date   { font-size: 12px; color: #aaa; margin: 2px 0 8px; }
+
+.order-status-badge {
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.order-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.order-item-tag {
+  font-size: 11px;
+  background: white;
+  border: 1px solid #c8e6c9;
+  color: #2e7d32;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.order-amount { font-size: 18px; font-weight: 800; color: #2e7d32; margin: 0; }
+
+.order-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-countdown {
+  font-size: 12px;
+  color: #f57f17;
+  font-weight: 600;
+  background: #fff8e1;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.cancel-order-btn {
+  background: #ffebee;
+  color: #e53935;
+  border: 1.5px solid #ffcdd2;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: auto;
+  margin: 0;
+  box-shadow: none;
+}
+
+.cancel-order-btn:hover {
+  background: #e53935;
+  color: white;
+  transform: scale(1.03);
+}
+
+.cancel-order-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── BUDGET TRACKER ── */
+.bt-subtitle {
+  font-size: 12px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: -12px 0 20px;
+}
+
+.bt-step { display: flex; flex-direction: column; gap: 6px; margin-bottom: 24px; }
+.bt-label { font-size: 13px; font-weight: 600; color: #555; margin-top: 10px; }
+
+.bt-input {
+  padding: 11px 16px;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.bt-input:focus { border-color: #2e7d32; }
+
+.bt-gender-row { display: flex; gap: 12px; margin-bottom: 8px; }
+
+.bt-gender-btn {
+  flex: 1;
+  padding: 12px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.bt-gender-btn.active { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; }
+
+.bt-goal-cards { display: flex; gap: 12px; margin-bottom: 24px; }
+
+.bt-goal-card {
+  flex: 1;
+  padding: 16px 10px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bt-goal-card.active { border-color: #2e7d32; background: #e8f5e9; }
+
+.bt-goal-icon  { font-size: 28px; }
+.bt-goal-title { font-size: 13px; font-weight: 700; color: #1b1b1b; margin: 6px 0 2px; }
+.bt-goal-desc  { font-size: 11px; color: #888; margin: 0; }
+
+.bt-budget-hints { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+
+.bt-hint-chip {
+  padding: 5px 14px;
+  background: #f1f8e9;
+  border: 1px solid #c8e6c9;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2e7d32;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bt-hint-chip:hover { background: #2e7d32; color: white; }
+
+.bt-next-btn {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(46,125,50,0.3);
+}
+
+.bt-next-btn:disabled { background: #ccc; box-shadow: none; cursor: not-allowed; }
+.bt-next-btn:not(:disabled):hover { transform: scale(1.02); }
+
+.bt-calorie-card {
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.bt-calorie-num   { font-size: 48px; font-weight: 900; color: white; margin: 0; line-height: 1; }
+.bt-calorie-label { font-size: 13px; color: #c8e6c9; margin: 4px 0 0; }
+
+.bt-calorie-tag {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bt-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 12px;
+}
+
+.bt-macros { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.bt-macro-row { display: flex; align-items: center; gap: 12px; }
+.bt-macro-name { width: 90px; font-size: 13px; font-weight: 600; color: #555; flex-shrink: 0; }
+
+.bt-bar-bg { flex: 1; height: 10px; background: #f0f0f0; border-radius: 10px; overflow: hidden; }
+.bt-bar    { height: 100%; border-radius: 10px; width: 0; }
+
+@keyframes growBar { from { width: 0; } to { width: 100%; } }
+
+.protein-bar { background: linear-gradient(to right, #2e7d32, #66bb6a); }
+.carbs-bar   { background: linear-gradient(to right, #f9a825, #fdd835); }
+.fat-bar     { background: linear-gradient(to right, #e53935, #ef9a9a); }
+
+.bt-macro-val { width: 45px; font-size: 13px; font-weight: 700; color: #1b1b1b; text-align: right; }
+
+.bt-budget-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+
+.bt-budget-card { padding: 16px; border-radius: 14px; text-align: center; }
+
+.protein-bg { background: #e8f5e9; }
+.carbs-bg   { background: #fffde7; }
+.fat-bg     { background: #ffebee; }
+.suppl-bg   { background: #e3f2fd; }
+
+.bt-budget-cat { font-size: 12px; color: #666; margin: 0 0 4px; }
+.bt-budget-amt { font-size: 20px; font-weight: 800; color: #1b1b1b; margin: 0 0 2px; }
+.bt-budget-pct { font-size: 11px; color: #aaa; margin: 0; }
+
+.bt-weekly-tip {
+  background: #f9f6e8;
+  border: 1px solid #e8f5e9;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+}
